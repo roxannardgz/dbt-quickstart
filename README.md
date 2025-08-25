@@ -4,27 +4,30 @@
 
 
 This is my first project on Snowflake using dbt Cloud 🎉 <br>
-I followed the official guide [Quickstart for dbt and Snowflake](https://docs.getdbt.com/guides/snowflake?step=1), an excellent starting point for getting into the world of dbt.
+I followed the official guide [Quickstart for dbt and Snowflake](https://docs.getdbt.com/guides/snowflake?step=1) and [dbt Fundamentals course](https://learn.getdbt.com/learn/course/dbt-fundamentals), an excellent starting point for getting into the world of dbt.
 
 ## Overview
 - **Warehouse:** Snowflake (RAW, ANALYTICS).
 - **Transformations:** dbt Cloud (Studio + Orchestration).
 - **Versioning:** GitHub PR workflow.
-- **Goal:** Learn to create reliable, documented, and tested analytics models.
+- **Goal:** Learn to build a reliable, documented, and tested analytics models.
 
-## What this project does
+## What This Project Does
 - Connects **dbt Cloud** to a **Snowflake** data warehouse.
-- Creates a simple data model using **staging** and **marts**.
-- Demonstrates how to run, test, and version-control models with **GitHub**.
+- Builds a layered data model using staging and marts.
+- Applies version control with GitHub, practicing branching and pull request workflows.
+- Introduces testing, documentation, and lineage tracking in dbt.
 
-## Why I did this
-dbt is an amazing tool in the data engineering field that brings software development best practices into analytics and facilitates cross-functional collaboration. As part of my continuous learning, I wanted hands-on experience with dbt. This repo documents the beginning of my journey ✨
+## Why I Did This
+dbt has become a foundation of modern analytics engineering, bringing software development best practices into analytics and facilitating cross-functional collaboration. I wanted hands-on experience with the tools and workflows that data teams rely on today. This repository documents my learning path and demonstrates how I translate those concepts into a working project. ✨
 
-## Lessons learned and suggestions for other learners
-- When learning, pay attention to every step, don’t just copy-paste!
-- Save your files before running dbt. Commit often.
-- GitHub is worth setting up early, even if Managed repos are easier.
-- The “Deploy” section in older tutorials is now called **Orchestration**.
+## Lessons Learned
+- Project structure: Learned to follow dbt’s best-practice model layers (src → stg → int → fact → dim) for clarity and maintainability.
+- Data modeling: Practiced an agile, denormalized approach that takes advantage of modern cloud warehouse performance.
+- Modularity: Used macros and ref() to manage dependencies between models, ensuring reusable, testable SQL.
+- Analytics engineering mindset: Applied modular thinking from software engineering (version control, branching, environment setup) to analytics workflows.
+- Source management: Configured sources.yml to centralize definitions, enable multi-table lineage, and check freshness with dbt source freshness.
+- Scalability practices: Organized source YAML files by domain/schema for easier collaboration and long-term growth.
 
 ## Next Steps
- Continue with [dbt Fundamentals](https://learn.getdbt.com/learn/course/dbt-fundamentals).
+ Complete [dbt Fundamentals](https://learn.getdbt.com/learn/course/dbt-fundamentals) for deeper coverage of testing, documentation, and deployment.
